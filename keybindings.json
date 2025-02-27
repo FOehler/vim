@@ -1,0 +1,66 @@
+[
+  {
+    "key": "alt+n",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal'",
+    "args": {
+      "commands": [{ "command": "workbench.action.nextEditor" }]
+    }
+  },
+  {
+    "key": "alt+p",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal'",
+    "args": {
+      "commands": [{ "command": "workbench.action.previousEditor" }]
+    }
+  },
+  {
+    "key": "alt+h",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal'",
+    "args": {
+      "commands": [{ "command": "workbench.action.navigateLeft" }]
+    }
+  },
+  {
+    "key": "alt+l",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal'",
+    "args": {
+      "commands": [{ "command": "workbench.action.navigateRight" }]
+    }
+  },
+  {
+    "key": "alt+k",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal'",
+    "args": {
+      "commands": [{ "command": "workbench.action.navigateUp" }]
+    }
+  },
+  {
+    "key": "alt+j",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal'",
+    "args": {
+      "commands": [{ "command": "workbench.action.navigateDown" }]
+    }
+  },
+  {
+    "key": "[",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal'",
+    "args": {
+      "commands": [{ "command": "workbench.action.gotoPreviousSymbolFromNavigations" }]
+    }
+  },
+  {
+    "key": "]",
+    "command": "vim.remap",
+    "when": "inputFocus && vim.mode == 'Normal'",
+    "args": {
+      "commands": [{ "command": "workbench.action.gotoNextSymbolFromNavigations" }]
+    }
+  }
+]

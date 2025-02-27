@@ -1,0 +1,555 @@
+{
+  "vim.leader": " ",
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.visualstar": true,
+  "vim.smartcase": true,
+  "vim.easymotion": true,
+  "vim.surround": true,
+  "vim.sneak": true,
+  "vim.showMarksInGutter": true,
+  "vim.useCtrlKeys": true,
+  "vim.handleKeys": {
+    "<C-j>": false,
+    "<C-k>": false
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>"],
+      "commands": ["whichkey.show"]
+    },
+    {
+      "before": ["q", "j"],
+      "after": ["@", "q"]
+    },
+    // Leader key mappings
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "commands": ["vim.easymotion-s"]
+    },
+    {
+      "before": ["<leader>", "x"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "z", "c"],
+      "commands": ["editor.foldAll"]
+    },
+    {
+      "before": ["<leader>", "z", "o"],
+      "commands": ["editor.unfoldAll"]
+    },
+    {
+      "before": ["<leader>", "w", "v"],
+      "commands": ["workbench.action.splitEditorRight"]
+    },
+    {
+      "before": ["<leader>", "w", "h"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
+      "before": ["<leader>", "w", "u"],
+      "commands": ["workbench.action.joinAllGroups"]
+    },
+    {
+      "before": ["<leader>", "w", "m"],
+      "commands": ["workbench.action.moveEditorToNextGroup"]
+    },
+    {
+      "before": ["<leader>", "d", "d"],
+      "commands": ["workbench.action.toggleEditorWidths"]
+    },
+    {
+      "before": ["<leader>", "d", "z"],
+      "commands": ["workbench.action.toggleZenMode"]
+    },
+    {
+      "before": ["<leader>", "d", "f"],
+      "commands": ["workbench.action.toggleFullScreen"]
+    },
+    {
+      "before": ["<leader>", "a", "m"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["<leader>", "a", "s"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["<leader>", "b", "b"],
+      "commands": ["workbench.action.tasks.build"]
+    },
+    {
+      "before": ["<leader>", "b", "r"],
+      "commands": ["workbench.action.tasks.rebuild"]
+    },
+    {
+      "before": ["<leader>", "b", "t"],
+      "commands": ["workbench.action.tasks.test"]
+    },
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "f", "r"],
+      "commands": ["workbench.action.openRecent"]
+    },
+    {
+      "before": ["<leader>", "f", "c"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "f", "l"],
+      "commands": ["workbench.action.openPreviousRecentlyUsedEditor"]
+    },
+    {
+      "before": ["<leader>", "f", "e"],
+      "commands": ["revealInExplorer"]
+    },
+    {
+      "before": ["<leader>", "f", "n"],
+      "commands": ["workbench.action.files.newUntitledFile"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "r", "m"],
+      "commands": ["editor.action.codeAction"]
+    },
+    {
+      "before": ["<leader>", "r", "v"],
+      "commands": ["editor.action.codeAction"]
+    },
+    {
+      "before": ["<leader>", "r", "f"],
+      "commands": ["editor.action.codeAction"]
+    },
+    {
+      "before": ["<leader>", "r", "s"],
+      "commands": ["editor.action.codeAction"]
+    },
+    {
+      "before": ["<leader>", "r", "r"],
+      "commands": ["editor.action.refactor"]
+    },
+    {
+      "before": ["<leader>", "r", "p"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["<leader>", "g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["<leader>", "g", "y"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["<leader>", "g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["<leader>", "g", "u"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["<leader>", "g", "t"],
+      "commands": ["workbench.action.gotoTest"]
+    },
+    {
+      "before": ["<leader>", "g", "b"],
+      "commands": ["workbench.action.navigateBack"]
+    },
+    {
+      "before": ["<leader>", "g", "f"],
+      "commands": ["workbench.action.navigateForward"]
+    },
+    {
+      "before": ["<leader>", "v", "c"],
+      "commands": ["git.commitAll"]
+    },
+    {
+      "before": ["<leader>", "v", "s"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["<leader>", "v", "b"],
+      "commands": ["git.checkout"]
+    },
+    {
+      "before": ["<leader>", "e", "n"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "e", "p"],
+      "commands": ["editor.action.marker.prev"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    },
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["<space>"],
+      "commands": ["whichkey.show"]
+    }
+  ],
+  "whichkey.bindings": [
+    {
+      "key": "a",
+      "name": "Actions",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "m",
+          "name": "Open context menu",
+          "type": "command",
+          "command": "editor.action.showContextMenu"
+        },
+        {
+          "key": "s",
+          "name": "Open command modal",
+          "type": "command",
+          "command": "workbench.action.showCommands"
+        }
+      ]
+    },
+    {
+      "key": "b",
+      "name": "Build and Test",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "b",
+          "name": "Build Solution",
+          "type": "command",
+          "command": "workbench.action.tasks.build"
+        },
+        {
+          "key": "r",
+          "name": "Rebuild Solution",
+          "type": "command",
+          "command": "workbench.action.tasks.reRunTask"
+        },
+        {
+          "key": "t",
+          "name": "Test Solution",
+          "type": "command",
+          "command": "workbench.action.tasks.test"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "name": "Comment line",
+      "type": "command",
+      "command": "editor.action.commentLine"
+    },
+    {
+      "key": "d",
+      "name": "Display options",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "d",
+          "name": "Toggle Distraction-Free mode",
+          "type": "command",
+          "command": "workbench.action.toggleCenteredLayout"
+        },
+        {
+          "key": "z",
+          "name": "Toggle Zen mode",
+          "type": "command",
+          "command": "workbench.action.toggleZenMode"
+        },
+        {
+          "key": "f",
+          "name": "Toggle full screen",
+          "type": "command",
+          "command": "workbench.action.toggleFullScreen"
+        }
+      ]
+    },
+    {
+      "key": "e",
+      "name": "Error navigation",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "n",
+          "name": "Go to next error in solution",
+          "type": "command",
+          "command": "editor.action.marker.next"
+        },
+        {
+          "key": "p",
+          "name": "Go to previous error in solution",
+          "type": "command",
+          "command": "editor.action.marker.prev"
+        }
+      ]
+    },
+    {
+      "key": "f",
+      "name": "File navigation",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "f",
+          "name": "Go to file",
+          "type": "command",
+          "command": "workbench.action.quickOpen"
+        },
+        {
+          "key": "c",
+          "name": "Search for file content",
+          "type": "command",
+          "command": "workbench.action.findInFiles"
+        },
+        {
+          "key": "r",
+          "name": "Show recent files",
+          "type": "command",
+          "command": "workbench.action.openRecent"
+        },
+        {
+          "key": "l",
+          "name": "Show recent locations",
+          "type": "command",
+          "command": "workbench.action.openPreviousRecentlyUsedEditor"
+        },
+        {
+          "key": "e",
+          "name": "Locate in explorer",
+          "type": "command",
+          "command": "revealFileInOS"
+        },
+        {
+          "key": "n",
+          "name": "New file",
+          "type": "command",
+          "command": "workbench.action.files.newUntitledFile"
+        }
+      ]
+    },
+    {
+      "key": "g",
+      "name": "Go to X",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "d",
+          "name": "Go to Definition",
+          "type": "command",
+          "command": "editor.action.goToDeclaration"
+        },
+        {
+          "key": "y",
+          "name": "Go to Type Definition",
+          "type": "command",
+          "command": "editor.action.goToTypeDefinition"
+        },
+        {
+          "key": "i",
+          "name": "Go to Implementation",
+          "type": "command",
+          "command": "editor.action.goToImplementation"
+        },
+        {
+          "key": "u",
+          "name": "Go to Usages",
+          "type": "command",
+          "command": "editor.action.referenceSearch.trigger"
+        },
+        {
+          "key": "t",
+          "name": "Go to Test",
+          "type": "command",
+          "command": "editor.action.goToTest"
+        },
+        {
+          "key": "b",
+          "name": "Go Back",
+          "type": "command",
+          "command": "workbench.action.navigateBack"
+        },
+        {
+          "key": "f",
+          "name": "Go Forward",
+          "type": "command",
+          "command": "workbench.action.navigateForward"
+        }
+      ]
+    },
+    {
+      "key": "j",
+      "name": "Jump with Easymotion",
+      "type": "command",
+      "command": "editor.action.smartSelect.expand"
+    },
+    {
+      "key": "q",
+      "name": "Close active tab",
+      "type": "command",
+      "command": "workbench.action.closeActiveEditor"
+    },
+    {
+      "key": "r",
+      "name": "Refactoring menu",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "n",
+          "name": "Rename element",
+          "type": "command",
+          "command": "editor.action.rename"
+        },
+        {
+          "key": "m",
+          "name": "Extract method",
+          "type": "command",
+          "command": "editor.action.codeAction"
+        },
+        {
+          "key": "v",
+          "name": "Introduce variable",
+          "type": "command",
+          "command": "editor.action.codeAction"
+        },
+        {
+          "key": "f",
+          "name": "Introduce field",
+          "type": "command",
+          "command": "editor.action.codeAction"
+        },
+        {
+          "key": "s",
+          "name": "Change signature",
+          "type": "command",
+          "command": "editor.action.codeAction"
+        },
+        {
+          "key": "r",
+          "name": "Open refactorings list",
+          "type": "command",
+          "command": "editor.action.refactor"
+        },
+        {
+          "key": "p",
+          "name": "Reformat code",
+          "type": "command",
+          "command": "editor.action.formatDocument"
+        }
+      ]
+    },
+    {
+      "key": "v",
+      "name": "Git operations",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "c",
+          "name": "Open Git commit dialog",
+          "type": "command",
+          "command": "git.commit"
+        },
+        {
+          "key": "s",
+          "name": "Open Git status dialog",
+          "type": "command",
+          "command": "git.openChange"
+        },
+        {
+          "key": "b",
+          "name": "Open Git branches list",
+          "type": "command",
+          "command": "git.checkout"
+        }
+      ]
+    },
+    {
+      "key": "w",
+      "name": "Window splits",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "v",
+          "name": "Split vertically",
+          "type": "command",
+          "command": "workbench.action.splitEditorRight"
+        },
+        {
+          "key": "h",
+          "name": "Split horizontally",
+          "type": "command",
+          "command": "workbench.action.splitEditorDown"
+        },
+        {
+          "key": "u",
+          "name": "Unsplit",
+          "type": "command",
+          "command": "workbench.action.closeEditorsInGroup"
+        },
+        {
+          "key": "m",
+          "name": "Move editor to opposite tab group",
+          "type": "command",
+          "command": "workbench.action.moveEditorToNextGroup"
+        }
+      ]
+    },
+    {
+      "key": "x",
+      "name": "Open file explorer",
+      "type": "command",
+      "command": "workbench.view.explorer"
+    },
+    {
+      "key": "z",
+      "name": "Folding",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "c",
+          "name": "Fold all regions",
+          "type": "command",
+          "command": "editor.foldAll"
+        },
+        {
+          "key": "o",
+          "name": "Unfold all regions",
+          "type": "command",
+          "command": "editor.unfoldAll"
+        }
+      ]
+    }
+  ],
+  "editor.cursorSurroundingLines": 10
+}
