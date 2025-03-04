@@ -48,6 +48,7 @@ let g:WhichKeyDesc_easymotion_prefix = "<leader><leader>"
 let g:WhichKeyDesc_build = "<leader>b Build and Test"
 let g:WhichKeyDesc_build_rebuild_solution = "<leader>br Rebuild Solution"
 let g:WhichKeyDesc_build_build_solution = "<leader>bb Build Solution"
+let g:WhichKeyDesc_build_run_debug = "<leader>bd Debug current configuration"
 let g:WhichKeyDesc_build_test = "<leader>bt Unit Testing"
 let g:WhichKeyDesc_build_test_solution = "<leader>bts Test Solution"
 let g:WhichKeyDesc_build_test_file = "<leader>btf Test File"
@@ -164,7 +165,7 @@ map <leader>zo :action ExpandAllRegions<CR>
 
 " Window splits
 map <leader>wv <Action>(SplitVertically)
-map <leader>ws <Action>(SplitHorizontally)
+map <leader>wh <Action>(SplitHorizontally)
 map <leader>wu <Action>(Unsplit)
 map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
 
@@ -180,6 +181,7 @@ map <leader>as <action>(SearchEverywhere)
 " Build
 map <leader>bb <action>(BuildSolutionAction)
 map <leader>br <action>(RebuildSolutionAction)
+map <leader>bd <action>(Run)
 map <leader>bts <action>(RiderUnitTestRunSolutionAction)
 map <leader>btf <action>(RiderUnitTestRunContextAction)
 map <leader>bto <action>(ActivateUnitTestsToolWindow)
