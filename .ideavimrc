@@ -1,90 +1,92 @@
-"" .ideavimrc - Fabrice Oehler
- 
- 
+"" .ideavimrc - Matt Chapman
+
+
 "" Base Settings
 "" ========================================================
- 
-set scrolloff=10
+
+set scrolloff=15
 set linenumber
 set showmode
 set showcmd
- 
+
 set smartcase
 set incsearch
 set hlsearch
- 
+
 set visualbell
- 
+
 " Use system clipboard
 set clipboard+=unnamed   
- 
+
 let mapleader = " "
- 
- 
+
+
 "" Plugin Settings
 "" ========================================================
- 
+
 set surround
 set highlightedyank
 "" set sneak -> not available
-set nerdtree
- 
+"" set nerdtree -> currently not used
+
 " Easymotion settings
 set easymotion
 set notimeout
- 
+
 " Which-key settings
 set which-key
-let g:WhichKey_FontSize = 16
-let g:WhichKey_CommandColor = "#41ead4"
-let g:WhichKey_PrefixColor = "#f335b2"
+let g:WhichKey_FontSize = 12
+let g:WhichKey_CommandColor = "#2ae83a"
+let g:WhichKey_PrefixColor = "#338be8"
 let g:WhichKey_SortOrder = "by_key_prefix_first"
- 
+
 let g:WhichKeyDesc_leader = "<leader> Leader key"
- 
-let g:WhichKeyDesc_leader = "<leader>x Open file explorer"
- 
+
 let g:WhichKeyDesc_easymotion = "<leader>j Jump with Easymotion"
 let g:WhichKeyDesc_easymotion_prefix = "<leader><leader>"
- 
+
 let g:WhichKeyDesc_build = "<leader>b Build and Test"
 let g:WhichKeyDesc_build_rebuild_solution = "<leader>br Rebuild Solution"
 let g:WhichKeyDesc_build_build_solution = "<leader>bb Build Solution"
-let g:WhichKeyDesc_build_test_solution = "<leader>bt Test Solution"
- 
+let g:WhichKeyDesc_build_test = "<leader>bt Unit Testing"
+let g:WhichKeyDesc_build_test_solution = "<leader>bts Test Solution"
+let g:WhichKeyDesc_build_test_file = "<leader>btf Test File"
+let g:WhichKeyDesc_build_test_open_explorer = "<leader>bto Open Unit Test Explorer"
+
 let g:WhichKeyDesc_comment = "<leader>c Comment line"
- 
+
 let g:WhichKeyDesc_fold = "<leader>z Folding"
 let g:WhichKeyDesc_fold_all = "<leader>zc Fold all regions"
 let g:WhichKeyDesc_unfold_all = "<leader>zo Unfold all regions"
- 
+
 let g:WhichKeyDesc_window = "<leader>w Window splits"
 let g:WhichKeyDesc_window_split_vertically = "<leader>wv Split vertically"
 let g:WhichKeyDesc_window_split_horizontally = "<leader>wh Split horizontally"
 let g:WhichKeyDesc_window_split_unsplit = "<leader>wu Unsplit"
 let g:WhichKeyDesc_window_split_move_editor = "<leader>wm Move editor to opposite tab group"
- 
+
 let g:WhichKeyDesc_display = "<leader>d Display options"
 let g:WhichKeyDesc_zen_mode = "<leader>dz Toggle Zen mode"
 let g:WhichKeyDesc_df_mode = "<leader>dd Toggle Distraction-Free mode"
 let g:WhichKeyDesc_fullscreen = "<leader>df Toggle full screen"
- 
+
 let g:WhichKeyDesc_action= "<leader>a Actions"
 let g:WhichKeyDesc_action_context_menu = "<leader>am Open context menu"
 let g:WhichKeyDesc_action_search = "<leader>as Open command modal"
- 
+
 let g:WhichKeyDesc_file_quickLook = "<leader><leader> Recent files"
- 
+
 let g:WhichKeyDesc_file_nav = "<leader>f File navigation"
 let g:WhichKeyDesc_file_nav_goto_file = "<leader>ff Go to file"
 let g:WhichKeyDesc_file_nav_goto_content = "<leader>fc Search for file content"
 let g:WhichKeyDesc_file_nav_show_recent_files = "<leader>fr Show recent files"
 let g:WhichKeyDesc_file_nav_show_recent_locations = "<leader>fl Show recent locations"
 let g:WhichKeyDesc_file_nav_show_in_solution_view = "<leader>fe Locate in solution explorer"
+let g:WhichKeyDesc_file_nav_show_file_structure = "<leader>fs Show file structure"
 let g:WhichKeyDesc_file_nav_show_create_file = "<leader>fn New file"
- 
+
 let g:WhichKeyDesc_close_tab = "<leader>q Close active tab"
- 
+
 let g:WhichKeyDesc_refactoring = "<leader>r Refactoring menu"
 let g:WhichKeyDesc_refactoring_rename = "<leader>rn Rename element"
 let g:WhichKeyDesc_refactoring_method = "<leader>rm Extract method"
@@ -93,7 +95,7 @@ let g:WhichKeyDesc_refactoring_field = "<leader>rf Introduce field"
 let g:WhichKeyDesc_refactoring_signature = "<leader>rs Change signature"
 let g:WhichKeyDesc_refactoring_all = "<leader>rr Open refactorings list"
 let g:WhichKeyDesc_refactoring_reformat_code = "<leader>rp Reformat code"
- 
+
 let g:WhichKeyDesc_goto = "<leader>g Go to X"
 let g:WhichKeyDesc_goto_declaration = "<leader>gd Go to Definition"
 let g:WhichKeyDesc_goto_type_declaration = "<leader>gy Go to Type Definition"
@@ -102,84 +104,86 @@ let g:WhichKeyDesc_goto_usages = "<leader>gu Go to Usages"
 let g:WhichKeyDesc_goto_test = "<leader>gt Go to Test"
 let g:WhichKeyDesc_goto_back = "<leader>gb Go Back"
 let g:WhichKeyDesc_goto_forward = "<leader>gf Go Forward"
- 
+
 let g:WhichKeyDesc_git = "<leader>v Git operations"
 let g:WhichKeyDesc_git_commit = "<leader>vc Open Git commit dialog"
 let g:WhichKeyDesc_git_status = "<leader>vs Open Git status dialog"
 let g:WhichKeyDesc_git_branches = "<leader>vb Open Git branches list"
- 
+
 let g:WhichKeyDesc_errors = "<leader>e Error navigation"
 let g:WhichKeyDesc_errors_next = "<leader>en Go to next error in solution"
 let g:WhichKeyDesc_errors_prev = "<leader>ep Go to previous error in solution"
- 
- 
+let g:WhichKeyDesc_errors_warning_next = "<leader>ew Go to next problem / warning in file"
+
 "" Key mappings
 "" ========================================================
- 
+
 inoremap jk <Esc>
- 
+
 " Tab navigation
 nnoremap <A-n> :tabnext<CR>
 nnoremap <A-p> :tabprev<CR>
- 
+
 " Pane navigation
 nnoremap <A-h> <C-w>h
 nnoremap <A-l> <C-w>l
 nnoremap <A-k> <C-w>k
 nnoremap <A-j> <C-w>j
- 
+
 " Jump between methods
 nnoremap [ :action MethodUp<CR>
 nnoremap ] :action MethodDown<CR>
- 
+
 " Easy visual indentation
 vnoremap < <gv
 vnoremap > >gv
- 
+
 " Execute macro saved in 'q' register
 nnoremap qj @q
- 
+
+" Close all side windows
+nnoremap <A-q> :action HideAllWindows<CR>
+
 " Popup navigation
 imap <C-j> <Action>(PopupMenu-selectNext)
 imap <C-k> <Action>(PopupMenu-selectPrev)
- 
- 
+
+
 "" Leader commands
 "" ========================================================
- 
+
 " Comment lines
 map <leader>c <action>(CommentByLineComment)
- 
+
 " Jump around with easymotion
 map <leader>j <Plug>(easymotion-s)
- 
-" Open NERDTree (use q to exit)
-map <leader>x :NERDTreeToggle<CR>
- 
+
 " Folding
 map <leader>zc :action CollapseAllRegions<CR>
 map <leader>zo :action ExpandAllRegions<CR>
- 
+
 " Window splits
 map <leader>wv <Action>(SplitVertically)
 map <leader>ws <Action>(SplitHorizontally)
 map <leader>wu <Action>(Unsplit)
 map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
- 
+
 " Display options
 map <leader>dd <action>(ToggleDistractionFreeMode)
 map <leader>dz <action>(ToggleZenMode)
 map <leader>df <action>(ToggleFullScreen)
- 
+
 " Actions
 map <leader>am <action>(ShowIntentionActions)
 map <leader>as <action>(SearchEverywhere)
- 
+
 " Build
 map <leader>bb <action>(BuildSolutionAction)
 map <leader>br <action>(RebuildSolutionAction)
-map <leader>bt <action>(RiderUnitTestRunSolutionAction)
- 
+map <leader>bts <action>(RiderUnitTestRunSolutionAction)
+map <leader>btf <action>(RiderUnitTestRunContextAction)
+map <leader>bto <action>(ActivateUnitTestsToolWindow)
+
 " File navigation
 map <leader>ff <action>(GotoFile)
 map <leader>fr <action>(RecentFiles)
@@ -187,10 +191,11 @@ map <leader>fc <action>(FindInPath)
 map <leader>fl <action>(RecentLocations)
 map <leader>fe <action>(LocateInSolutionView)
 map <leader>fn <action>(NewElementSamePlace)
- 
+map <leader>fs <action>(FileStructurePopup)
+
 " Close active tab
 map <leader>q <action>(CloseContent)
- 
+
 " Refactoring
 map <leader>rn <Action>(RenameElement)
 map <leader>rm <Action>(ExtractMethod)
@@ -199,7 +204,7 @@ map <leader>rf <Action>(IntroduceField)
 map <leader>rs <Action>(ChangeSignature)
 map <leader>rr <Action>(Refactorings.QuickListPopupAction)
 map <leader>rp <Action>(ReformatCode)
- 
+
 " Go to code
 nmap <leader>gd <Action>(GotoDeclaration)
 nmap <leader>gy <Action>(GotoTypeDeclaration)
@@ -208,12 +213,13 @@ nmap <leader>gu <Action>(ShowUsages)
 nmap <leader>gt <Action>(GotoTest)
 nmap <leader>gf <Action>(Back)
 nmap <leader>gb <Action>(Forward)
- 
+
 " Git windows
-map <leader>vc <Action>(CheckinProject)
+map <leader>vc <Action>(ActivateCommitToolWindow)
 map <leader>vs <Action>(ActivateVersionControlToolWindow)
 map <leader>vb <Action>(Git.Branches)
- 
+
 " Errors
 map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
 map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
+map <leader>ew <Action>(SwitcherNextProblem)
