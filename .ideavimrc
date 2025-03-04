@@ -222,4 +222,4 @@ map <leader>vb <Action>(Git.Branches)
 " Errors
 map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
 map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
-map <leader>ew <Action>(SwitcherNextProblem)
+map <leader>ew <Action>(GotoNextError)
