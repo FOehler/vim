@@ -9,6 +9,7 @@ set linenumber
 set showmode
 set showcmd
 
+set ignorecase
 set smartcase
 set incsearch
 set hlsearch
